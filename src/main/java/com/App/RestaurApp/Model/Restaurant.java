@@ -1,5 +1,6 @@
 package com.App.RestaurApp.Model;
 
+import java.util.List;
 import javax.persistence.*;
 
 @Entity
@@ -12,6 +13,9 @@ public class Restaurant {
     private String name;
     private String description;
     private String history;
+    
+    @OneToMany(mappedBy = "restaurant")
+    private List<Food> foods;
 
     public Long getId() {
         return id;
