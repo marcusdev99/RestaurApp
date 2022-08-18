@@ -13,6 +13,8 @@ public class Food {
     private String description;
     private String price;
     @ManyToOne
+    private Category category;
+    @ManyToOne
     private Restaurant restaurant;
 
     public Long getId() {
